@@ -18,7 +18,7 @@ namespace Repository.Migrations
                         MenuItemId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.MenuItem", t => t.MenuItemId, cascadeDelete: true)
+                .ForeignKey("dbo.MenuItem", t => t.MenuItemId, cascadeDelete: false)
                 .Index(t => t.MenuItemId);
             
             CreateTable(
@@ -32,8 +32,8 @@ namespace Repository.Migrations
                         MenuItem_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Extra", t => t.ExtraId, cascadeDelete: true)
-                .ForeignKey("dbo.SaleDetail", t => t.SaleDetailId, cascadeDelete: true)
+                .ForeignKey("dbo.Extra", t => t.ExtraId, cascadeDelete: false)
+                .ForeignKey("dbo.SaleDetail", t => t.SaleDetailId, cascadeDelete: false)
                 .ForeignKey("dbo.MenuItem", t => t.MenuItem_Id)
                 .Index(t => t.SaleDetailId)
                 .Index(t => t.ExtraId)
@@ -49,8 +49,8 @@ namespace Repository.Migrations
                         MenuItemId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.MenuItem", t => t.MenuItemId, cascadeDelete: true)
-                .ForeignKey("dbo.Sale", t => t.SaleId, cascadeDelete: true)
+                .ForeignKey("dbo.MenuItem", t => t.MenuItemId, cascadeDelete: false)
+                .ForeignKey("dbo.Sale", t => t.SaleId, cascadeDelete: false)
                 .Index(t => t.SaleId)
                 .Index(t => t.MenuItemId);
             
@@ -66,8 +66,8 @@ namespace Repository.Migrations
                         MenuId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Menu", t => t.MenuId, cascadeDelete: true)
-                .ForeignKey("dbo.TypeMenuItem", t => t.TypeMenuItemId, cascadeDelete: true)
+                .ForeignKey("dbo.Menu", t => t.MenuId, cascadeDelete: false)
+                .ForeignKey("dbo.TypeMenuItem", t => t.TypeMenuItemId, cascadeDelete: false)
                 .Index(t => t.TypeMenuItemId)
                 .Index(t => t.MenuId);
             

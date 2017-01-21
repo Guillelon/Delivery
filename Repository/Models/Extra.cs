@@ -15,8 +15,8 @@ namespace Repository.Models
         public string Description { get; set; }
         public decimal Amount { get; set; }
 
-        public int MenuItemId { get; set; }
-        public virtual MenuItem MenuItem { get; set; }
+        public int TypeMenuItemId { get; set; }
+        public virtual TypeMenuItem TypeMenuItem { get; set; }
 
         public virtual ICollection<ExtraSaleDetail> ExtraSaleDetails { get; set; }
     }

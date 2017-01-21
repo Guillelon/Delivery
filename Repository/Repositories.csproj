@@ -53,6 +53,14 @@
     <Compile Include="Migrations\201701141708060_initMigration.Designer.cs">
       <DependentUpon>201701141708060_initMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701152148151_RemovingWrongForeingKey.cs" />
+    <Compile Include="Migrations\201701152148151_RemovingWrongForeingKey.Designer.cs">
+      <DependentUpon>201701152148151_RemovingWrongForeingKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701152151385_ChangingFKOfExtrasFromMenuItemToTypeMenuItem.cs" />
+    <Compile Include="Migrations\201701152151385_ChangingFKOfExtrasFromMenuItemToTypeMenuItem.Designer.cs">
+      <DependentUpon>201701152151385_ChangingFKOfExtrasFromMenuItemToTypeMenuItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Extra.cs" />
     <Compile Include="Models\ExtraSaleDetail.cs" />
@@ -63,6 +71,9 @@
     <Compile Include="Models\TypeMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DeliveryDataContext.cs" />
+    <Compile Include="Repositories\MasterRepository.cs" />
+    <Compile Include="Repositories\MenuItemRepository.cs" />
+    <Compile Include="Repositories\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +82,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701141708060_initMigration.resx">
       <DependentUpon>201701141708060_initMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701152148151_RemovingWrongForeingKey.resx">
+      <DependentUpon>201701152148151_RemovingWrongForeingKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701152151385_ChangingFKOfExtrasFromMenuItemToTypeMenuItem.resx">
+      <DependentUpon>201701152151385_ChangingFKOfExtrasFromMenuItemToTypeMenuItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
